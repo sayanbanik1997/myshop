@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="@string/Products"
+        android:icon="@drawable/nav_header_img"
+        android:id="@+id/productMenu" />
+    <item
+        android:title="@string/Customers_and_suppliers"
+        android:icon="@drawable/nav_header_img"
+        android:id="@+id/cusAndSupMenu" />
+    <item
+        android:title="@string/buyOrSell"
+        android:icon="@drawable/nav_header_img"
+        android:id="@+id/buySellMenu" />
+    <item
+        android:title="@string/Bills_and_payments"
+        android:icon="@drawable/nav_header_img"
+        android:id="@+id/billAndPaymentMenu" />
+    <item
+        android:title="@string/Groups"
+        android:icon="@drawable/nav_header_img"
+        android:id="@+id/groupMenu" />
+    <item
+        android:title="@string/Profile"
+        android:icon="@drawable/nav_header_img"
+        android:id="@+id/profileMenu" />
+
+</menu>

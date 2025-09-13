@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".PdfFrag"
+    android:background="@color/white"
+    android:padding="10dp"
+
+    >
+
+    <TextView
+        android:id="@+id/shopNameTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/pdfBigFont"
+        android:textStyle="bold"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+         />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bill Id : "
+        android:id="@+id/billIdDumyTxt"
+        android:layout_alignParentLeft="true"
+        android:paddingTop="40dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/pdfNormalFont"
+
+        app:layout_constraintTop_toBottomOf="@+id/shopNameTxt"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/billIdTxt"
+        android:paddingTop="40dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/pdfNormalFont"
+
+        app:layout_constraintTop_toBottomOf="@id/shopNameTxt"
+        app:layout_constraintLeft_toRightOf="@id/billIdDumyTxt"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dateTxt"
+        android:layout_alignParentRight="true"
+        android:paddingTop="40dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/pdfNormalFont"
+
+        app:layout_constraintTop_toBottomOf="@id/shopNameTxt"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/pdfEntryRecyView"
+
+        app:layout_constraintTop_toBottomOf="@id/billIdTxt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total : "
+        android:id="@+id/totalDumyTxt"
+        android:layout_toLeftOf="@+id/totalTxt"
+        android:textColor="@color/black"
+        android:textSize="@dimen/pdfNormalFont"
+
+        app:layout_constraintTop_toBottomOf="@+id/pdfEntryRecyView"
+        app:layout_constraintRight_toLeftOf="@id/totalTxt"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/totalTxt"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/black"
+        android:textSize="@dimen/pdfNormalFont"
+
+        app:layout_constraintTop_toBottomOf="@id/pdfEntryRecyView"
+        app:layout_constraintRight_toRightOf="parent"
+
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

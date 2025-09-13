@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/prodNameTxt"
+        android:paddingRight="@dimen/normalPadding"
+        android:textColor="@color/black"
+        android:textSize="@dimen/pdfNormalFont"
+
+        />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/quantityTxt"
+                android:paddingRight="@dimen/normalPadding"
+                android:textColor="@color/black"
+                android:textSize="@dimen/pdfNormalFont"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/unitTxt"
+                android:paddingRight="@dimen/normalPadding"
+                android:textColor="@color/black"
+                android:textSize="@dimen/pdfNormalFont"
+
+                />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/totalTxt"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/pdfNormalFont"
+
+            />
+
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/prodBillExtraInfoTxt"
+        android:textColor="@color/black"
+        android:textSize="@dimen/pdfNormalFont"
+
+        />
+
+</LinearLayout>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BuySellFrag"
+    android:padding="5dp"
+
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+
+            >
+
+            <TextView
+                android:id="@+id/billIdTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/normalFont"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"  />
+
+            <TextView
+                android:id="@+id/cusSupNameTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="cussupname"
+                android:textSize="@dimen/normalFont"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/buyOrSellTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/normalFont"
+
+                android:text="@string/buy"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cusSupNameTxt"
+
+                />
+
+            <TextView
+                android:id="@+id/datetimeTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="datetime"
+                android:textSize="@dimen/normalFont"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            android:id="@+id/eachBillEntryreview"
+
+            />
+    </LinearLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentBottom="true"
+
+        >
+
+        <TextView
+            android:id="@+id/haveToPayDumyTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/TxtPaddingTopBecauseOfEdtTxt"
+            android:textSize="@dimen/normalFont"
+
+            android:text="@string/Have_to_pay"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/haveToPayEdt"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberSigned"
+            app:layout_constraintStart_toEndOf="@+id/haveToPayDumyTxt"
+            app:layout_constraintTop_toTopOf="parent"
+            android:paddingLeft="@dimen/normalPadding"
+
+            />
+
+        <TextView
+            android:id="@+id/paidUpPaidTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/paid"
+            android:paddingTop="@dimen/TxtPaddingTopBecauseOfEdtTxt"
+            android:textColor="@color/blue"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textView2"
+            app:layout_constraintStart_toEndOf="@+id/haveToPayEdt" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/TxtPaddingTopBecauseOfEdtTxt"
+            android:text="@string/total"
+
+            android:textSize="@dimen/normalFont"
+            app:layout_constraintEnd_toStartOf="@+id/totalTxt"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total"
+            android:id="@+id/totalTxt"
+            android:textSize="@dimen/normalFont"
+            android:paddingTop="@dimen/TxtPaddingTopBecauseOfEdtTxt"
+            android:paddingLeft="@dimen/normalPadding"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/saveBtn"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="@string/save"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/haveToPayDumyTxt" />
+
+        <Button
+            android:id="@+id/qrBtn"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="@string/QR"
+            app:layout_constraintBottom_toBottomOf="@+id/saveBtn"
+            app:layout_constraintEnd_toStartOf="@+id/printBtn"
+            app:layout_constraintStart_toEndOf="@+id/saveBtn"
+            app:layout_constraintTop_toTopOf="@+id/printBtn" />
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="@string/print"
+
+            android:id="@+id/printBtn"
+            app:layout_constraintEnd_toStartOf="@id/memBtn"
+            app:layout_constraintTop_toBottomOf="@+id/totalTxt"
+
+            />
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+
+            android:id="@+id/memBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/totalTxt"
+
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
